@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>JQuery Örnekleri</h1>
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <h2>Example - 1</h2>
+        <div class="col-md-12">
+          <button class="btn btn-primary" id="uyari">Uyari Yap</button>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <h2>Example - 2</h2>
+        <div class="col-md-12">
+            <h1 class="alert alert-info" id="zemin">mesaj</h1>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <h2>Example - 3</h2>
+        <div class="col-md-3">
+            <div>
+                <label for="">Mesaj: </label>
+                <input type="text" class="form-control" id="mesaj" placeholder="Lütfen mesaj giriniz...">
+            </div>
+            <div class="mt-2 float-end">
+                <button class="btn btn-outline-primary" id="mesajGonder">Mesaj Gönder</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        // $(function () {} => Bu kısım belge yüklendikten sonra çalıştırlacağını söyler
+      $(function () {
+
+        //Example-1
+        $("#uyari").on("click", function () {
+          window.alert("Merhaba Dünya");
+        });
+
+        //Example-2
+        $("#zemin").html("Merhaba Dünya");
+
+        //Example-3
+        $("#mesajGonder").on("click", function() {
+            var mesaj = $("#mesaj").val();
+            window.alert(`Gelen Mesaj => ${mesaj}`);
+        });
+      });
+
+      
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
